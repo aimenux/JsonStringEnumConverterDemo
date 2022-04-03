@@ -23,12 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example04Tests", "Tests\Exa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6A53ED03-7542-4177-A170-273FC34B5FCC}"
 	ProjectSection(SolutionItems) = preProject
+		.github\workflows\ci.yml = .github\workflows\ci.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example05", "Example05\Example05.csproj", "{C5F6E3B7-5B36-4EBC-80CF-1E0AD8B901BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example05", "Example05\Example05.csproj", "{C5F6E3B7-5B36-4EBC-80CF-1E0AD8B901BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example05Tests", "Tests\Example05Tests\Example05Tests.csproj", "{6C91F78E-42EC-4107-93F0-A412BEDD70F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example05Tests", "Tests\Example05Tests\Example05Tests.csproj", "{6C91F78E-42EC-4107-93F0-A412BEDD70F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

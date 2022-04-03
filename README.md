@@ -1,9 +1,11 @@
+[![.NET](https://github.com/aimenux/JsonStringEnumConverterDemo/actions/workflows/ci.yml/badge.svg)](https://github.com/aimenux/JsonStringEnumConverterDemo/actions/workflows/ci.yml)
+
 # JsonStringEnumConverterDemo
 ```
 Using various ways to support serialization/deserialization and model binding of enums in web api
 ```
 
-In this demo, i m using various ways in order to suppport serialization/deserialization and model binding of enums (with/without [EnumMemberAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.enummemberattribute)) in web api using [System.Text.Json](https://docs.microsoft.com/en-us/dotnet/api/system.text.json) :
+In this demo, i m using various ways in order to suppport serialization/deserialization and model binding of enums (with or without [EnumMemberAttribute](https://docs.microsoft.com/en-us/dotnet/api/system.runtime.serialization.enummemberattribute)) in web api using [System.Text.Json](https://docs.microsoft.com/en-us/dotnet/api/system.text.json) :
 >
 :one: `Example01` : Use localy `JsonStringEnumConverter` to support serialization/deserialization and model binding of enums (without `EnumMemberAttribute`)
 >
