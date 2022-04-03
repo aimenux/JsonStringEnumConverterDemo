@@ -2,7 +2,7 @@ using System.ComponentModel;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Example04.Converters;
+namespace Example05.Converters;
 
 public class JsonStringEnumConverter<T> : JsonConverter<T> where T : struct, Enum
 {

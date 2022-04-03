@@ -1,5 +1,6 @@
 ﻿using System.Text.Json;
 using Example03.Application;
+using FluentAssertions;
 using Xunit;
 
 namespace Example03Tests
@@ -15,7 +16,7 @@ namespace Example03Tests
         public void EnumToStringTests(Country country, string expected)
         {
             var result = JsonSerializer.Serialize(country);
-            Assert.Equal(expected, result);
+            result.Should().Be(expected);
         }
 
         [Theory]
@@ -28,7 +29,7 @@ namespace Example03Tests
         public void StringToEnumTests(string value, Country expected)
         {
             var result = JsonSerializer.Deserialize<Country>(value);
-            Assert.Equal(expected, result);
+            result.Should().Be(expected);
         }
     }
 }

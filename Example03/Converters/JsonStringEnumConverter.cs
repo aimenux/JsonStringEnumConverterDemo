@@ -13,6 +13,11 @@ public class JsonStringEnumConverter<T> : JsonConverter<T> where T : struct, Enu
 
     private static readonly Dictionary<Type, Dictionary<string, T>> Cache = new Dictionary<Type, Dictionary<string, T>>();
 
+    public override bool CanConvert(Type typeToConvert)
+    {
+        return typeToConvert == typeof(T);
+    }
+
     public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
         var stringValue = reader.GetString() ?? "";
