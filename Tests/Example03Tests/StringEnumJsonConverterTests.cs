@@ -1,19 +1,12 @@
-﻿using System.ComponentModel;
-using System.Text.Json;
-using Example05.Application;
-using Example05.Converters;
+﻿using System.Text.Json;
+using Example03.Application;
 using FluentAssertions;
 using Xunit;
 
-namespace Example05Tests
+namespace Example03Tests
 {
-    public class JsonStringEnumConverterTests
+    public class StringEnumJsonConverterTests
     {
-        public JsonStringEnumConverterTests()
-        {
-            TypeDescriptor.AddAttributes(typeof(Country), new TypeConverterAttribute(typeof(StringEnumConverter<Country>)));
-        }
-
         [Theory]
         [InlineData(Country.France, "\"FR\"")]
         [InlineData(Country.Spain, "\"ES\"")]
@@ -22,9 +15,7 @@ namespace Example05Tests
         [InlineData((Country)99, "\"99\"")]
         public void EnumToStringTests(Country country, string expected)
         {
-            var options = new JsonSerializerOptions();
-            options.Converters.Add(new JsonStringEnumConverter<Country>());
-            var result = JsonSerializer.Serialize(country, options);
+            var result = JsonSerializer.Serialize(country);
             result.Should().Be(expected);
         }
 
@@ -37,9 +28,7 @@ namespace Example05Tests
         [InlineData("null", default(Country))]
         public void StringToEnumTests(string value, Country expected)
         {
-            var options = new JsonSerializerOptions();
-            options.Converters.Add(new JsonStringEnumConverter<Country>());
-            var result = JsonSerializer.Deserialize<Country>(value, options);
+            var result = JsonSerializer.Deserialize<Country>(value);
             result.Should().Be(expected);
         }
     }

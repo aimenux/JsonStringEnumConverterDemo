@@ -9,30 +9,10 @@ public class EmployeeService : IEmployeeService
 {
     private static readonly ICollection<Employee> Employees = new List<Employee>
     {
-        new Employee
-        {
-            FirstName = "John",
-            LastName = "LeRoux",
-            Country = Country.France
-        },
-        new Employee
-        {
-            FirstName = "Raul",
-            LastName = "Espinoza",
-            Country = Country.Spain
-        },
-        new Employee
-        {
-            FirstName = "Giovanni",
-            LastName = "Don",
-            Country = Country.Italy
-        },
-        new Employee
-        {
-            FirstName = "Gabriel",
-            LastName = "Garcia",
-            Country = Country.Portugal
-        }
+        new Employee("John", "LeRoux", Country.France),
+        new Employee("Raul", "Espinoza", Country.Spain),
+        new Employee("Giovanni", "Don", Country.Italy),
+        new Employee("Gabriel", "Garcia", Country.Portugal)
     };
 
     public IEnumerable<Employee> GetEmployees(Country? country)

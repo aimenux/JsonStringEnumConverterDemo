@@ -6,7 +6,7 @@ using Example03.Converters;
 namespace Example03.Application;
 
 [TypeConverter(typeof(StringEnumConverter<Country>))]
-[JsonConverter(typeof(JsonStringEnumConverter<Country>))]
+[JsonConverter(typeof(StringEnumJsonConverter<Country>))]
 public enum Country
 {
     [EnumMember(Value = "FR")]

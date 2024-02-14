@@ -1,11 +1,11 @@
-using Example04;
+using Example02;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 
-namespace Example04Tests;
+namespace Example02Tests;
 
-public class WebApiTestFixture : WebApplicationFactory<Startup>
+public class CustomWebApplicationFactory : WebApplicationFactory<Startup>
 {
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {

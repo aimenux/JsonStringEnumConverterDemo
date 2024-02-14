@@ -11,7 +11,7 @@ public class EmployeeController : ControllerBase
 
     public EmployeeController(IEmployeeService employeeService)
     {
-        _employeeService = employeeService;
+        _employeeService = employeeService ?? throw new ArgumentNullException(nameof(employeeService));
     }
 
     [HttpGet]

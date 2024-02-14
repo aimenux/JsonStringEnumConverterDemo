@@ -36,6 +36,6 @@ public class Startup
 
     private static void ConfigureJsonSerializerOptions(JsonOptions options)
     {
-        options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter<Country>());
+        options.JsonSerializerOptions.Converters.Add(new StringEnumJsonConverter<Country>());
     }
 }

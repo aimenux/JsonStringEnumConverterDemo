@@ -4,9 +4,9 @@ using System.Text.Json.Serialization;
 
 namespace Example03.Converters;
 
-public class JsonStringEnumConverter<T> : JsonConverter<T> where T : struct, Enum
+public class StringEnumJsonConverter<T> : JsonConverter<T> where T : struct, Enum
 {
-    static JsonStringEnumConverter()
+    static StringEnumJsonConverter()
     {
         Cache.Add(typeof(T), CreateEnumDictionary<T>());
     }

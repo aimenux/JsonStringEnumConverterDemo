@@ -5,7 +5,7 @@ using Xunit;
 
 namespace Example04Tests
 {
-    public class JsonStringEnumConverterTests
+    public class StringEnumJsonConverterTests
     {
         [Theory]
         [InlineData(Country.France, "\"FR\"")]

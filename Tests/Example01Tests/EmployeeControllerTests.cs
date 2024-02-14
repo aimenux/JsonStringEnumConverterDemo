@@ -5,20 +5,20 @@ using Xunit;
 
 namespace Example01Tests;
 
-public class EmployeeControllerTests : IClassFixture<WebApiTestFixture>
+public class EmployeeControllerTests : IClassFixture<CustomWebApplicationFactory>
 {
-    private readonly WebApiTestFixture _fixture;
+    private readonly CustomWebApplicationFactory _factory;
 
-    public EmployeeControllerTests(WebApiTestFixture fixture)
+    public EmployeeControllerTests(CustomWebApplicationFactory factory)
     {
-        _fixture = fixture;
+        _factory = factory;
     }
 
     [Fact]
     public async Task ShouldGetEmployees()
     {
         // arrange
-        var client = _fixture.CreateClient();
+        var client = _factory.CreateClient();
 
         // act
         var response = await client.GetAsync("/employee");
@@ -39,7 +39,7 @@ public class EmployeeControllerTests : IClassFixture<WebApiTestFixture>
     public async Task ShouldGetEmployeesForValidCountry(string country, string expectedSerializedCountry)
     {
         // arrange
-        var client = _fixture.CreateClient();
+        var client = _factory.CreateClient();
 
         // act
         var response = await client.GetAsync($"/employee?country={country}");
@@ -58,7 +58,7 @@ public class EmployeeControllerTests : IClassFixture<WebApiTestFixture>
     public async Task ShouldGetBadRequestForInvalidCountry(string country)
     {
         // arrange
-        var client = _fixture.CreateClient();
+        var client = _factory.CreateClient();
 
         // act
         var response = await client.GetAsync($"/employee?country={country}");
