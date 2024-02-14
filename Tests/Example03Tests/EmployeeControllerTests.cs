@@ -5,11 +5,11 @@ using Xunit;
 
 namespace Example03Tests;
 
-public class EmployeeControllerTests : IClassFixture<CustomWebApplicationFactory>
+public class EmployeeControllerTests : IClassFixture<ApiWebApplicationFactory>
 {
-    private readonly CustomWebApplicationFactory _factory;
+    private readonly ApiWebApplicationFactory _factory;
 
-    public EmployeeControllerTests(CustomWebApplicationFactory factory)
+    public EmployeeControllerTests(ApiWebApplicationFactory factory)
     {
         _factory = factory;
     }
