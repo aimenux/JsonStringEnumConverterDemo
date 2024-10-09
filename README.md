@@ -17,4 +17,4 @@ In this demo, i m using various ways in order to support serialization/deseriali
 >
 :five: `Example05` : Use globally custom json converter to support serialization/deserialization and custom type converter to support model binding of enums (with `EnumMemberAttribute`)
 
-**`Tools`** : vs22, net 8.0, xunit, fluent-assertions
+**`Tools`** : net 8.0, xunit, fluent-assertions
